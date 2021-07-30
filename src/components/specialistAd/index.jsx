@@ -83,7 +83,7 @@ export function SpecialistAd(props) {
           /> */}
           <Marginer direction="vertical" margin="1em" />
           <SloganContainer>
-            <Slogan>Get access to the Infrastructure as Code Library.</Slogan>
+            <Slogan>GET ACCESS TO THE INFRASTRUCTURE AS A CODE LIBRARY.</Slogan>
             <Slogan>Build your infrastructure on top of a collection of over 300,000 lines of reusable, battle-tested infrastructure code written in Terraform, Go, Python, and Bash that has been proven in production at hundreds of companies and is maintained and supported by DevOps experts.</Slogan>
           </SloganContainer>
           <Marginer direction="vertical" margin="0.8em" />
@@ -101,7 +101,7 @@ export function SpecialistAd(props) {
           <Marginer direction="vertical" margin="1em" />
           
           <SloganContainer>
-            <Slogan>Deploy your entire tech stack.</Slogan>
+            <Slogan>DEPLOY YOUR ENTIRE TECH STACK.</Slogan>
             <Slogan>Deploy your own tech stack by following our Production Deployment Guides or have Gruntwork deploy a Reference Architecture for you, giving you an end-to-end tech stack, 100% backed by code, in about 1 day. You get to customize the tech stack to your needs, choosing from Kubernetes or ECS, MySQL or Postgres, Jenkins or CircleCI, and so on.</Slogan>
           </SloganContainer>
           <Marginer direction="vertical" margin="0.8em" />
@@ -113,7 +113,7 @@ export function SpecialistAd(props) {
         <SloganContainer>
           <Marginer direction="vertical" margin="1em" />
           <SloganContainer>
-            <Slogan>Get expert support and training.</Slogan>
+            <Slogan>GET EXPERT SUPPORT AND TRAINING.</Slogan>
             <Slogan>Get support from a team of DevOps experts who can help you with questions, troubleshooting, best practices, and maintenance. Learn DevOps from our DevOps Training Library or DevOps Bootcamps. We wrote the book on Terraform and the definitive guide to AWS, so you’re in good hands.</Slogan>
           </SloganContainer>
           <Marginer direction="vertical" margin="0.8em" />
@@ -124,20 +124,19 @@ export function SpecialistAd(props) {
         </StandoutImage>
       </ContentContainer>
       <ContentContainer>
+      <StandoutImage>
+          <img src={FarmingImg} alt="join-as-specialist" />
+        </StandoutImage>
         <SloganContainer>
           <Marginer direction="vertical" margin="1em" />
           <SloganContainer>
-            <Slogan>Get access to the Infrastructure as Code Library.</Slogan>
-            <Slogan>have an outstanding</Slogan>
-            <Slogan>Service to offer?</Slogan>
+            <Slogan>ACHIEVE COMPLIANCE.</Slogan>
+             <Slogan>Code Cloud Pro's modules are certified compliant by the Center for Internet Security (CIS), so you can get compliance out of the box, either by having Gruntwork deploy an end-to-end CIS-compliant Reference Architecture for you, or by assembling your own architecture using our modules and compliance guide.</Slogan>
           </SloganContainer>
           <Marginer direction="vertical" margin="0.8em" />
-          <Button size={15}>Join as Specialist</Button>
+          <Button size={15}>Acheive compliance</Button>
         </SloganContainer>
-        <StandoutImage>
-          <img src={FarmingImg} alt="join-as-specialist" />
-        </StandoutImage>
-      </ContentContainer>
+        </ContentContainer>
     </SpecialistAdContainer>
   );
 }
