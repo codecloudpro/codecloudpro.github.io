@@ -55,7 +55,7 @@ export function Navbar(props) {
     <NavbarContainer useTransparent={useTransparent}>
       <BrandLogo />
       <AccessibilityContainer>
-        {!isMobile && <AnchorLink>How it Works</AnchorLink>}
+        {!isMobile && <AnchorLink to="/components/how_it_works">How it Works</AnchorLink>}
         <Marginer direction="horizontal" margin={8} />
         {!isMobile && <AnchorLink> Products</AnchorLink>}
         <Marginer direction="horizontal" margin={8} />

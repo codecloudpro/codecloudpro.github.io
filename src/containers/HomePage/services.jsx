@@ -10,7 +10,7 @@ const ServicesContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background-color: aqua;
+  background-color: #98AFC7;
 `;
 
 const Title = styled.h1`
