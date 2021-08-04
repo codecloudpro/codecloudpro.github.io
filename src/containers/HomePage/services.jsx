@@ -10,6 +10,7 @@ const ServicesContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  background-color: aqua;
 `;
 
 const Title = styled.h1`
@@ -79,10 +80,10 @@ export function Services(props) {
 
   return (
     <ServicesContainer>
-      <Title>Most used services & More</Title>
+      <Title>You will be running on AWS nas GCP with</Title>
       <ServicesWrapper>
         {isServicesEmpty && !isLoading && (
-          <WarningText>No Services are published yet!</WarningText>
+          <WarningText>and we will provide you with 100% of the CODE</WarningText>
         )}
         {isLoading && <WarningText>Loading...</WarningText>}
         {!isServicesEmpty &&

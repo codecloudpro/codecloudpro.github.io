@@ -15,6 +15,7 @@ const NavbarContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0 1.5em;
+  
 
   background-color: ${({ useTransparent }) =>
     useTransparent ? "transparent" : "#264653"};
@@ -55,11 +56,17 @@ export function Navbar(props) {
       <BrandLogo />
       <AccessibilityContainer>
         {!isMobile && <AnchorLink>How it Works</AnchorLink>}
-        {!isMobile && <AnchorLink> _Products</AnchorLink>}
-        {!isMobile && <AnchorLink> _Guides</AnchorLink>}
-        {!isMobile && <AnchorLink>_Sign In</AnchorLink>}
-        {!isMobile && <AnchorLink> _Contact Sales</AnchorLink>}
+        <Marginer direction="horizontal" margin={8} />
+        {!isMobile && <AnchorLink> Products</AnchorLink>}
+        <Marginer direction="horizontal" margin={8} />
+        {!isMobile && <AnchorLink> Guides</AnchorLink>}
+        <Marginer direction="horizontal" margin={8} />
+        {!isMobile && <AnchorLink>Sign In</AnchorLink>}
+        <Marginer direction="horizontal" margin={8} />
+        {!isMobile && <AnchorLink> Contact Sales</AnchorLink>}
+        <Marginer direction="horizontal" margin={8} />
         {!isMobile && <Marginer direction="horizontal" margin={10} />}
+        <Marginer direction="horizontal" margin={8} />
         {!isMobile && <Seperator />}
         <Marginer direction="horizontal" margin={10} />
         <Link to="/customer/access/signup">

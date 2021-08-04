@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { BrandLogo } from "../brandLogo";
 import { Marginer } from "../marginer";
 
-import FarmingImg from "../../images/farming.png";
+import FarmingImg from "../../images/hello2.png";
 import { Button } from "../button";
 import { deviceSize } from "../responsive";
 import { useMediaQuery } from "react-responsive";
@@ -34,19 +34,19 @@ const SloganContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  margin-right: 5em;
+  
 
   @media screen and (max-width: ${deviceSize.mobile}px) {
     align-items: center;
     margin: 0;
   }
-`;
+`
 
 const Slogan = styled.h2`
   margin: 0;
-  font-size: 24px;
-  color: #fff;
-  font-weight: 700;
+  font-size: 22px;
+  color: #000000;
+  font-weight: 500;
   line-height: 1.3;
   text-align: start;
 
@@ -54,10 +54,9 @@ const Slogan = styled.h2`
     font-size: 20px;
   }
 `;
-
 const StandoutImage = styled.div`
-  width: 35em;
-  height: 29em;
+  width: 500px;
+  height: 250px;
 
   img {
     width: 100%;
@@ -77,10 +76,6 @@ export function SpecialistAd(props) {
     <SpecialistAdContainer>
       <ContentContainer>
         <SloganContainer>
-          {/* <BrandLogo
-            logoSize={isMobile ? 33 : 40}
-            textSize={isMobile ? 28 : 35}
-          /> */}
           <Marginer direction="vertical" margin="1em" />
           <SloganContainer>
             <Slogan>GET ACCESS TO THE INFRASTRUCTURE AS A CODE LIBRARY.</Slogan>
@@ -95,7 +90,7 @@ export function SpecialistAd(props) {
       </ContentContainer>
       <ContentContainer>
       <StandoutImage>
-          <img src={FarmingImg} alt="join-as-specialist" />
+          <img src={FarmingImg} alt="images" />
         </StandoutImage>
         <SloganContainer>
           <Marginer direction="vertical" margin="1em" />
