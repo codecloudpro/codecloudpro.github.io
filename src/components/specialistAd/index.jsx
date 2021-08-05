@@ -5,7 +5,6 @@ import { Marginer } from "../marginer";
 import FarmingImg from "../../images/hello2.png";
 import { Button } from "../button";
 import { deviceSize } from "../responsive";
-import { useMediaQuery } from "react-responsive";
 
 const SpecialistAdContainer = styled.div`
   width: 100%;
