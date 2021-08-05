@@ -50,7 +50,6 @@ const ViewMoreButton = styled(Button)`
   }
 `;
 
-const wait = (num) => new Promise((rs) => setTimeout(rs, num));
 
 export function Services(props) {
   const [offeredServices, setServices] = useState([]);
