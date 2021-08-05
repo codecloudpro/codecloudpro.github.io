@@ -87,7 +87,7 @@ const StartingAtText = styled.h6`
 `;
 
 export function ServiceCard(props) {
-  const { thumbnailUrl, specialist, id, title, rate, rating } = props;
+  const { thumbnailUrl, specialist, title, rate, rating } = props;
 
   return (
     <CardContainer>
