@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { BrandLogo } from "../brandLogo";
 import { Marginer } from "../marginer";
 
 import FarmingImg from "../../images/hello2.png";
@@ -70,7 +69,6 @@ const StandoutImage = styled.div`
 `;
 
 export function SpecialistAd(props) {
-  const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
 
   return (
     <SpecialistAdContainer>
