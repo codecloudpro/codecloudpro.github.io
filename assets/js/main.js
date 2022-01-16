@@ -1,6 +1,6 @@
 /**
-* Template Name: eNno - v4.7.0
-* Template URL: https://bootstrapmade.com/enno-free-simple-bootstrap-template/
+* Template Name: CodeCloudPro - v4.7.0
+* Template URL: https://bootstrapmade.com/CodeCloudPro-free-simple-bootstrap-template/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
