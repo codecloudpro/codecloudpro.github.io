@@ -743,6 +743,7 @@
           <p class="mt-6 text-sm text-gray-500 dark:text-gray-400">
             Prefer email? Reach us at
             <a
+              id="contact-email-link"
               class="font-medium text-purple-600 hover:text-purple-800 dark:text-purple-400 dark:hover:text-purple-300"
               href="mailto:codecloudpro@gmail.com"
               >codecloudpro@gmail.com</a
@@ -753,7 +754,7 @@
           <form
             id="contact-form"
             class="space-y-6"
-            data-endpoint="https://formsubmit.co/codecloudpro@gmail.com">
+            data-endpoint="">
             <div>
               <label
                 for="contact-name"
@@ -828,7 +829,7 @@
             </div>
             <p class="text-xs text-gray-500 dark:text-gray-400">
               We use this form to route your request and will reply from
-              codecloudpro@gmail.com.
+              <span id="contact-email-text">codecloudpro@gmail.com</span>.
             </p>
             <button
               type="submit"
@@ -1613,13 +1614,35 @@
       </div>
     </footer>
     <script>
+      const CCP_DEFAULT_CONFIG = {
+        formEndpoint: "https://formsubmit.co/codecloudpro@gmail.com",
+        email: "codecloudpro@gmail.com",
+        subject: "New CodeCloudPro website inquiry",
+      };
+
       document.addEventListener("DOMContentLoaded", () => {
+        const config = Object.assign(
+          {},
+          CCP_DEFAULT_CONFIG,
+          window.CODECLOUDPRO_CONFIG || {}
+        );
+
         const form = document.getElementById("contact-form");
         if (!form) return;
 
         const submitButton = document.getElementById("contact-submit");
         const messageBox = document.getElementById("contact-message");
-        const endpoint = form.dataset.endpoint;
+        const endpoint = config.formEndpoint || form.dataset.endpoint;
+
+        const emailLink = document.getElementById("contact-email-link");
+        const emailText = document.getElementById("contact-email-text");
+        if (emailLink && config.email) {
+          emailLink.textContent = config.email;
+          emailLink.href = `mailto:${config.email}`;
+        }
+        if (emailText && config.email) {
+          emailText.textContent = config.email;
+        }
 
         const setMessage = (text, variant) => {
           messageBox.textContent = text;
@@ -1636,9 +1659,9 @@
           event.preventDefault();
           messageBox.classList.add("hidden");
 
-          if (!endpoint || endpoint.includes("YOUR-FORM-ID")) {
+          if (!endpoint) {
             setMessage(
-              "Add your Formspree endpoint in the form’s data-endpoint attribute to receive submissions in your inbox.",
+              "Add a form endpoint via CODECLOUDPRO_CONFIG.formEndpoint to receive submissions in your inbox.",
               "error"
             );
             return;
@@ -1654,7 +1677,7 @@
           payload.append("cloud", form.cloud.value);
           payload.append("details", form.details.value.trim());
           payload.append("_replyto", form.email.value.trim());
-          payload.append("_subject", "New CodeCloudPro website inquiry");
+          payload.append("_subject", config.subject);
 
           try {
             const response = await fetch(endpoint, {
