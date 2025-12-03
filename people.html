@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>People | CodeCloudPro</title>
+    <link rel="canonical" href="https://codecloudpro.com/people" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <meta name="theme-color" content="#ffffff" />
+    <link href="./output.css" rel="stylesheet" />
+    <style>
+      .fade-up {
+        opacity: 0;
+        transform: translateY(18px);
+        transition: opacity 0.7s ease, transform 0.7s ease;
+      }
+      .fade-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .gallery-card img {
+        transition: transform 0.6s ease, filter 0.6s ease;
+      }
+      .gallery-card:hover img {
+        transform: scale(1.03);
+        filter: saturate(1.05);
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900 antialiased dark:bg-gray-900 dark:text-white">
+    <header class="sticky top-0 z-30 bg-white/90 backdrop-blur dark:bg-gray-900/90 border-b border-gray-100 dark:border-gray-800">
+      <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
+        <a href="./index.html" class="flex items-center space-x-3">
+          <img src="./images/logo.svg" alt="CodeCloudPro logo" class="h-8" />
+          <span class="text-lg font-semibold tracking-tight">CodeCloudPro</span>
+        </a>
+        <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+          <a href="./products.html" class="hover:text-purple-600 dark:hover:text-purple-400">Products</a>
+          <a href="./index.html#contact" class="hover:text-purple-600 dark:hover:text-purple-400">Contact</a>
+          <a
+            href="./index.html#contact"
+            class="px-4 py-2 rounded-full bg-purple-600 text-white hover:bg-purple-700 shadow-sm"
+            >Book a call</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-16 lg:py-24 space-y-12">
+      <section class="space-y-4 fade-up" data-animate>
+        <p class="text-sm font-semibold text-purple-700 dark:text-purple-400 uppercase tracking-wide">
+          People
+        </p>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">AI-first people platform with admin control.</h1>
+        <p class="text-lg text-gray-600 dark:text-gray-300 max-w-4xl">
+          Securely manage HR ops, attendance, leaves, assets, and performance in one platform. Granular access,
+          guided workflows, and AI assistance to reduce admin toil.
+        </p>
+      </section>
+
+      <section class="grid lg:grid-cols-2 gap-8 items-start">
+        <div class="space-y-4 text-sm text-gray-700 dark:text-gray-200 fade-up" data-animate>
+          <h3 class="text-xl font-semibold">Flow overview</h3>
+          <ol class="space-y-3 list-decimal list-inside">
+            <li><strong>Secure entry:</strong> portal guardrails and RBAC for admins, managers, and employees.</li>
+            <li><strong>Organization setup:</strong> departments, roles, feature access, and portal rules.</li>
+            <li><strong>People ops:</strong> employees, attendance, leaves, announcements, assets, inventory.</li>
+            <li><strong>Collaboration:</strong> meetings, integrations, and self-service for teams.</li>
+            <li><strong>Performance:</strong> goals, AI-assisted reviews, and insights to keep everyone aligned.</li>
+          </ol>
+          <p class="text-gray-600 dark:text-gray-300">
+            AI helps summarize performance, draft announcements, suggest actions, and keep data clean across workflows.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+            <a href="./people/secure-login.png" target="_blank" rel="noopener">
+              <img src="./people/secure-login.png" alt="People secure login" />
+            </a>
+            <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Secure login and portal guardrails.</p>
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+            <a href="./people/dashboard.png" target="_blank" rel="noopener">
+              <img src="./people/dashboard.png" alt="People dashboard" />
+            </a>
+            <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Admin dashboard with quick stats and AI tips.</p>
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+            <a href="./people/organization-details.png" target="_blank" rel="noopener">
+              <img src="./people/organization-details.png" alt="Organization details" />
+            </a>
+            <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Organization profile and branding controls.</p>
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+            <a href="./people/roles-settings.png" target="_blank" rel="noopener">
+              <img src="./people/roles-settings.png" alt="Roles settings" />
+            </a>
+            <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Roles and permissions with granular access.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid lg:grid-cols-3 gap-6">
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+          <a href="./people/portal-access-settings.png" target="_blank" rel="noopener">
+            <img src="./people/portal-access-settings.png" alt="Portal access settings" />
+          </a>
+          <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Portal access rules and guardrails.</p>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+          <a href="./people/feature-access-settings.png" target="_blank" rel="noopener">
+            <img src="./people/feature-access-settings.png" alt="Feature access settings" />
+          </a>
+          <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Feature access by role and team.</p>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+          <a href="./people/users-access-settings.png" target="_blank" rel="noopener">
+            <img src="./people/users-access-settings.png" alt="Users and access" />
+          </a>
+          <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">User and access controls at a glance.</p>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+          <a href="./people/employees-viewer.png" target="_blank" rel="noopener">
+            <img src="./people/employees-viewer.png" alt="Employees viewer" />
+          </a>
+          <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Employee directory with roles and status.</p>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+          <a href="./people/attendance-viewer.png" target="_blank" rel="noopener">
+            <img src="./people/attendance-viewer.png" alt="Attendance viewer" />
+          </a>
+          <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Attendance tracking and review.</p>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+          <a href="./people/leaves-apply-view.png" target="_blank" rel="noopener">
+            <img src="./people/leaves-apply-view.png" alt="Leaves apply view" />
+          </a>
+          <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Leaves: apply, approve, and audit trail.</p>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+          <a href="./people/meetings-create-join.png" target="_blank" rel="noopener">
+            <img src="./people/meetings-create-join.png" alt="Meetings create or join" />
+          </a>
+          <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Meetings: create/join directly from People.</p>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+          <a href="./people/goals-performance-ai.png" target="_blank" rel="noopener">
+            <img src="./people/goals-performance-ai.png" alt="Goals and performance AI" />
+          </a>
+          <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Goals & performance with AI-assisted summaries.</p>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+          <a href="./people/assets-inventory.png" target="_blank" rel="noopener">
+            <img src="./people/assets-inventory.png" alt="Assets and inventory" />
+          </a>
+          <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Assets & inventory tracking with ownership.</p>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+          <a href="./people/announcements.png" target="_blank" rel="noopener">
+            <img src="./people/announcements.png" alt="Announcements" />
+          </a>
+          <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Announcements with targeted delivery.</p>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+          <a href="./people/org-contents-editor.png" target="_blank" rel="noopener">
+            <img src="./people/org-contents-editor.png" alt="Organization contents editor" />
+          </a>
+          <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Org content editor and branding.</p>
+        </div>
+      </section>
+
+      <section class="p-6 rounded-2xl bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-xl fade-up" data-animate>
+        <div class="grid lg:grid-cols-2 gap-6 items-center">
+          <div class="space-y-3">
+            <h3 class="text-2xl font-bold">Ready for a People walkthrough?</h3>
+            <p class="text-sm text-purple-100">
+              We’ll demo admin controls, AI-assisted workflows, and how we onboard your team securely.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <a
+              href="./index.html#contact"
+              class="px-4 py-2 rounded-full bg-white text-purple-700 font-semibold hover:bg-purple-100">
+              Schedule a demo
+            </a>
+            <a
+              href="mailto:nitesh.chauhan@codecloudpro.com"
+              class="px-4 py-2 rounded-full border border-white/60 text-white font-semibold hover:bg-white/10">
+              Email us
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-gray-200 bg-white dark:bg-gray-900 dark:border-gray-800">
+      <div class="max-w-7xl mx-auto px-4 py-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div class="flex items-center space-x-3">
+          <img src="./images/logo.svg" class="h-8" alt="CodeCloudPro logo" />
+          <span class="text-lg font-semibold">CodeCloudPro</span>
+        </div>
+        <div class="text-sm text-gray-500 dark:text-gray-400">
+          AI-native products with production-ready infrastructure. © 2024 CodeCloudPro.
+        </div>
+        <div class="flex items-center space-x-4 text-sm text-gray-600 dark:text-gray-300">
+          <a href="./products.html" class="hover:text-purple-600 dark:hover:text-purple-400">Products</a>
+          <a href="./index.html#contact" class="hover:text-purple-600 dark:hover:text-purple-400">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const targets = document.querySelectorAll("[data-animate]");
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.15 }
+        );
+        targets.forEach((el) => observer.observe(el));
+      });
+    </script>
+  </body>
+</html>

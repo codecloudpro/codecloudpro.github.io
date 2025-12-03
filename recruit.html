@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recruit | CodeCloudPro</title>
+    <link rel="canonical" href="https://codecloudpro.com/recruit" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <meta name="theme-color" content="#ffffff" />
+    <link href="./output.css" rel="stylesheet" />
+    <style>
+      .fade-up {
+        opacity: 0;
+        transform: translateY(18px);
+        transition: opacity 0.7s ease, transform 0.7s ease;
+      }
+      .fade-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .gallery-card img {
+        transition: transform 0.6s ease, filter 0.6s ease;
+      }
+      .gallery-card:hover img {
+        transform: scale(1.03);
+        filter: saturate(1.05);
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900 antialiased dark:bg-gray-900 dark:text-white">
+    <header class="sticky top-0 z-30 bg-white/90 backdrop-blur dark:bg-gray-900/90 border-b border-gray-100 dark:border-gray-800">
+      <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
+        <a href="./index.html" class="flex items-center space-x-3">
+          <img src="./images/logo.svg" alt="CodeCloudPro logo" class="h-8" />
+          <span class="text-lg font-semibold tracking-tight">CodeCloudPro</span>
+        </a>
+        <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+          <a href="./products.html" class="hover:text-purple-600 dark:hover:text-purple-400">Products</a>
+          <a href="./index.html#contact" class="hover:text-purple-600 dark:hover:text-purple-400">Contact</a>
+          <a
+            href="./index.html#contact"
+            class="px-4 py-2 rounded-full bg-purple-600 text-white hover:bg-purple-700 shadow-sm"
+            >Book a call</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-16 lg:py-24 space-y-12">
+      <section class="space-y-4 fade-up" data-animate>
+        <p class="text-sm font-semibold text-purple-700 dark:text-purple-400 uppercase tracking-wide">
+          Recruit
+        </p>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">AI-first recruitment and talent operations.</h1>
+        <p class="text-lg text-gray-600 dark:text-gray-300 max-w-4xl">
+          Automate sourcing, scoring, and approvals. AI generates JDs, ranks candidates, and keeps your pipeline
+          organized from application to hire.
+        </p>
+      </section>
+
+      <section class="grid lg:grid-cols-2 gap-8 items-start">
+        <div class="space-y-4 text-sm text-gray-700 dark:text-gray-200 fade-up" data-animate>
+          <h3 class="text-xl font-semibold">Flow overview</h3>
+          <ol class="space-y-3 list-decimal list-inside">
+            <li><strong>Secure entry:</strong> role-based login for recruiters, hiring managers, and admins.</li>
+            <li><strong>JD & launch:</strong> AI-generated job descriptions, multi-department launch, public apply links.</li>
+            <li><strong>Pipeline & scoring:</strong> AI matches candidates to roles, ranks them, and tracks stages.</li>
+            <li><strong>Interviews & feedback:</strong> schedule interviews, record scores, and view score history.</li>
+            <li><strong>Conversion:</strong> move successful candidates to employee records with a click.</li>
+          </ol>
+          <p class="text-gray-600 dark:text-gray-300">
+            AI assists with JD drafts, resume parsing, candidate scoring, and pipeline focus so teams spend time on
+            decisions—not data entry.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+            <a href="./recruit/secure-login.png" target="_blank" rel="noopener">
+              <img src="./recruit/secure-login.png" alt="Recruit secure login" />
+            </a>
+            <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Secure login for recruiters and managers.</p>
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+            <a href="./recruit/dashboard.png" target="_blank" rel="noopener">
+              <img src="./recruit/dashboard.png" alt="Recruit dashboard" />
+            </a>
+            <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Dashboard with AI pipeline focus highlights.</p>
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+            <a href="./recruit/ai-jd-generator.png" target="_blank" rel="noopener">
+              <img src="./recruit/ai-jd-generator.png" alt="AI JD generator" />
+            </a>
+            <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">AI JD generator to launch roles faster.</p>
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+            <a href="./recruit/public-link-generator.png" target="_blank" rel="noopener">
+              <img src="./recruit/public-link-generator.png" alt="Public link generator" />
+            </a>
+            <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Public apply links for candidates.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid lg:grid-cols-3 gap-6">
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+          <a href="./recruit/jobs-section-ai.png" target="_blank" rel="noopener">
+            <img src="./recruit/jobs-section-ai.png" alt="Jobs section with AI" />
+          </a>
+          <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Jobs with AI insights and quick actions.</p>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+          <a href="./recruit/job-launcher-departments.png" target="_blank" rel="noopener">
+            <img src="./recruit/job-launcher-departments.png" alt="Job launcher" />
+          </a>
+          <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Launch jobs across departments and roles.</p>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+          <a href="./recruit/ai-job-launcher.png" target="_blank" rel="noopener">
+            <img src="./recruit/ai-job-launcher.png" alt="AI job launcher" />
+          </a>
+          <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">AI-assisted job launch and targeting.</p>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+          <a href="./recruit/ai-matches-ranking.png" target="_blank" rel="noopener">
+            <img src="./recruit/ai-matches-ranking.png" alt="AI matches ranking" />
+          </a>
+          <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">AI matches and ranks candidates automatically.</p>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+          <a href="./recruit/upload-resume-ai.png" target="_blank" rel="noopener">
+            <img src="./recruit/upload-resume-ai.png" alt="Upload resume AI" />
+          </a>
+          <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Resume upload with AI extraction and scoring.</p>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+          <a href="./recruit/pipeline-overview.png" target="_blank" rel="noopener">
+            <img src="./recruit/pipeline-overview.png" alt="Pipeline overview" />
+          </a>
+          <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Pipeline overview with AI stage focus.</p>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+          <a href="./recruit/stage-management-ai.png" target="_blank" rel="noopener">
+            <img src="./recruit/stage-management-ai.png" alt="Stage management AI" />
+          </a>
+          <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Stage management with AI notes and prompts.</p>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+          <a href="./recruit/interviews-schedules.png" target="_blank" rel="noopener">
+            <img src="./recruit/interviews-schedules.png" alt="Interview schedules" />
+          </a>
+          <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Interview scheduling and viewer.</p>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+          <a href="./recruit/score-candidate-interview.png" target="_blank" rel="noopener">
+            <img src="./recruit/score-candidate-interview.png" alt="Score candidates" />
+          </a>
+          <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Interview scoring with history.</p>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+          <a href="./recruit/score-history.png" target="_blank" rel="noopener">
+            <img src="./recruit/score-history.png" alt="Score history" />
+          </a>
+          <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Score history and audit trails.</p>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+          <a href="./recruit/talent-pool-overview.png" target="_blank" rel="noopener">
+            <img src="./recruit/talent-pool-overview.png" alt="Talent pool" />
+          </a>
+          <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Talent pool overview for active and passive candidates.</p>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+          <a href="./recruit/pipeline-settings.png" target="_blank" rel="noopener">
+            <img src="./recruit/pipeline-settings.png" alt="Pipeline settings" />
+          </a>
+          <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Pipeline settings and automation rules.</p>
+        </div>
+      </section>
+
+      <section class="grid lg:grid-cols-3 gap-6">
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+          <a href="./recruit/reports.png" target="_blank" rel="noopener">
+            <img src="./recruit/reports.png" alt="Reports" />
+          </a>
+          <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Reports for hiring velocity and funnel health.</p>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+          <a href="./recruit/public-jd-page.png" target="_blank" rel="noopener">
+            <img src="./recruit/public-jd-page.png" alt="Public JD" />
+          </a>
+          <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Public JD page for external candidates.</p>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+          <a href="./recruit/convert-to-employee.png" target="_blank" rel="noopener">
+            <img src="./recruit/convert-to-employee.png" alt="Convert to employee" />
+          </a>
+          <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Convert hired candidates to employees seamlessly.</p>
+        </div>
+      </section>
+
+      <section class="p-6 rounded-2xl bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-xl fade-up" data-animate>
+        <div class="grid lg:grid-cols-2 gap-6 items-center">
+          <div class="space-y-3">
+            <h3 class="text-2xl font-bold">Ready for a Recruit walkthrough?</h3>
+            <p class="text-sm text-purple-100">
+              We’ll demo sourcing, scoring, and pipelines with AI assistance, and plan your rollout.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <a
+              href="./index.html#contact"
+              class="px-4 py-2 rounded-full bg-white text-purple-700 font-semibold hover:bg-purple-100">
+              Schedule a demo
+            </a>
+            <a
+              href="mailto:nitesh.chauhan@codecloudpro.com"
+              class="px-4 py-2 rounded-full border border-white/60 text-white font-semibold hover:bg-white/10">
+              Email us
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-gray-200 bg-white dark:bg-gray-900 dark:border-gray-800">
+      <div class="max-w-7xl mx-auto px-4 py-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div class="flex items-center space-x-3">
+          <img src="./images/logo.svg" class="h-8" alt="CodeCloudPro logo" />
+          <span class="text-lg font-semibold">CodeCloudPro</span>
+        </div>
+        <div class="text-sm text-gray-500 dark:text-gray-400">
+          AI-native products with production-ready infrastructure. © 2024 CodeCloudPro.
+        </div>
+        <div class="flex items-center space-x-4 text-sm text-gray-600 dark:text-gray-300">
+          <a href="./products.html" class="hover:text-purple-600 dark:hover:text-purple-400">Products</a>
+          <a href="./index.html#contact" class="hover:text-purple-600 dark:hover:text-purple-400">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const targets = document.querySelectorAll("[data-animate]");
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.15 }
+        );
+        targets.forEach((el) => observer.observe(el));
+      });
+    </script>
+  </body>
+</html>

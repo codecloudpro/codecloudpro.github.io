@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpecSelect | CodeCloudPro</title>
+    <link rel="canonical" href="https://codecloudpro.com/specselect" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <meta name="theme-color" content="#ffffff" />
+    <link href="./output.css" rel="stylesheet" />
+    <style>
+      .fade-up {
+        opacity: 0;
+        transform: translateY(18px);
+        transition: opacity 0.7s ease, transform 0.7s ease;
+      }
+      .fade-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .gallery-card img {
+        transition: transform 0.6s ease, filter 0.6s ease;
+      }
+      .gallery-card:hover img {
+        transform: scale(1.03);
+        filter: saturate(1.05);
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900 antialiased dark:bg-gray-900 dark:text-white">
+    <header class="sticky top-0 z-30 bg-white/90 backdrop-blur dark:bg-gray-900/90 border-b border-gray-100 dark:border-gray-800">
+      <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
+        <a href="./index.html" class="flex items-center space-x-3">
+          <img src="./images/logo.svg" alt="CodeCloudPro logo" class="h-8" />
+          <span class="text-lg font-semibold tracking-tight">CodeCloudPro</span>
+        </a>
+        <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+          <a href="./products.html" class="hover:text-purple-600 dark:hover:text-purple-400">Products</a>
+          <a href="./index.html#contact" class="hover:text-purple-600 dark:hover:text-purple-400">Contact</a>
+          <a
+            href="./index.html#contact"
+            class="px-4 py-2 rounded-full bg-purple-600 text-white hover:bg-purple-700 shadow-sm"
+            >Book a call</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-16 lg:py-24 space-y-12">
+      <section class="space-y-4 fade-up" data-animate>
+        <p class="text-sm font-semibold text-purple-700 dark:text-purple-400 uppercase tracking-wide">
+          SpecSelect
+        </p>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Specification intelligence with client-ready workflows.</h1>
+        <p class="text-lg text-gray-600 dark:text-gray-300 max-w-4xl">
+          Keep requirements, design, and delivery aligned. Build selections, capture revisions, share secure client
+          portals, and export snapshots—all with governance and audit trails.
+        </p>
+      </section>
+
+      <section class="grid lg:grid-cols-2 gap-8 items-start">
+        <div class="space-y-4 text-sm text-gray-700 dark:text-gray-200 fade-up" data-animate>
+          <h3 class="text-xl font-semibold">Flow overview</h3>
+          <ol class="space-y-3 list-decimal list-inside">
+            <li><strong>Admin workspace:</strong> manage products, clients, and selections from the dashboard.</li>
+            <li><strong>Quote creation:</strong> build selections, lock/unlock, and share secure links with expiry.</li>
+            <li><strong>Client portal:</strong> clients log in with a secure token to view, comment, and approve.</li>
+            <li><strong>Revision history:</strong> capture snapshots, track changes, and export PDFs/Excel.</li>
+            <li><strong>Checkout-ready:</strong> clients review, confirm, or request edits before finalization.</li>
+          </ol>
+          <p class="text-gray-600 dark:text-gray-300">
+            AI assists with drafting specifications, summarizing revisions, and highlighting risk areas so teams stay in sync.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+            <a href="./specselect/Business Dashboard.png" target="_blank" rel="noopener">
+              <img src="./specselect/Business Dashboard.png" alt="SpecSelect admin dashboard" />
+            </a>
+            <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Admin dashboard: track clients, quotes, and AI productivity tips.</p>
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+            <a href="./specselect/Business Selections Page.png" target="_blank" rel="noopener">
+              <img src="./specselect/Business Selections Page.png" alt="Selections list" />
+            </a>
+            <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Selections overview: statuses, quick actions, history, and exports.</p>
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+            <a href="./specselect/Business Review Selection Page.png" target="_blank" rel="noopener">
+              <img src="./specselect/Business Review Selection Page.png" alt="Review selection modal" />
+            </a>
+            <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Review workflow: approve, request edits, add notes, export snapshots.</p>
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+            <a href="./specselect/Business Generate Customer Link Page.png" target="_blank" rel="noopener">
+              <img src="./specselect/Business Generate Customer Link Page.png" alt="Generate client link" />
+            </a>
+            <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Share securely: generate time-bound client links with one click.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid lg:grid-cols-3 gap-6">
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+          <a href="./specselect/Customer Login Page.png" target="_blank" rel="noopener">
+            <img src="./specselect/Customer Login Page.png" alt="Client portal login" />
+          </a>
+          <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Client portal login: secure token-based access.</p>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+          <a href="./specselect/Customer Welcome Page.png" target="_blank" rel="noopener">
+            <img src="./specselect/Customer Welcome Page.png" alt="Client welcome and status" />
+          </a>
+          <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Client status: pending review notice and next steps.</p>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+          <a href="./specselect/Customer Cart Page.png" target="_blank" rel="noopener">
+            <img src="./specselect/Customer Cart Page.png" alt="Client selection cart" />
+          </a>
+          <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Client cart: review, adjust, and submit selections.</p>
+        </div>
+      </section>
+
+      <section class="grid lg:grid-cols-2 gap-6">
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+          <a href="./specselect/Business Product Details Page.png" target="_blank" rel="noopener">
+            <img src="./specselect/Business Product Details Page.png" alt="Product detail admin view" />
+          </a>
+          <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Product details: variants, description, and edit controls.</p>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+          <a href="./specselect/Business View Revisions Page.png" target="_blank" rel="noopener">
+            <img src="./specselect/Business View Revisions Page.png" alt="Revisions history" />
+          </a>
+          <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Revision history: compare versions, preview, and export.</p>
+        </div>
+      </section>
+
+      <section class="p-6 rounded-2xl bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-xl fade-up" data-animate>
+        <div class="grid lg:grid-cols-2 gap-6 items-center">
+          <div class="space-y-3">
+            <h3 class="text-2xl font-bold">Ready for a SpecSelect walkthrough?</h3>
+            <p class="text-sm text-purple-100">
+              We’ll demo the admin console and client portal, share architecture, and map a go-live plan.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <a
+              href="./index.html#contact"
+              class="px-4 py-2 rounded-full bg-white text-purple-700 font-semibold hover:bg-purple-100">
+              Schedule a demo
+            </a>
+            <a
+              href="mailto:nitesh.chauhan@codecloudpro.com"
+              class="px-4 py-2 rounded-full border border-white/60 text-white font-semibold hover:bg-white/10">
+              Email us
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-gray-200 bg-white dark:bg-gray-900 dark:border-gray-800">
+      <div class="max-w-7xl mx-auto px-4 py-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div class="flex items-center space-x-3">
+          <img src="./images/logo.svg" class="h-8" alt="CodeCloudPro logo" />
+          <span class="text-lg font-semibold">CodeCloudPro</span>
+        </div>
+        <div class="text-sm text-gray-500 dark:text-gray-400">
+          AI-native products with production-ready infrastructure. © 2024 CodeCloudPro.
+        </div>
+        <div class="flex items-center space-x-4 text-sm text-gray-600 dark:text-gray-300">
+          <a href="./products.html" class="hover:text-purple-600 dark:hover:text-purple-400">Products</a>
+          <a href="./index.html#contact" class="hover:text-purple-600 dark:hover:text-purple-400">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const targets = document.querySelectorAll("[data-animate]");
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.15 }
+        );
+        targets.forEach((el) => observer.observe(el));
+      });
+    </script>
+  </body>
+</html>
