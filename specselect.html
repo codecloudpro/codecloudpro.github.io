@@ -13,6 +13,12 @@
     <meta name="theme-color" content="#ffffff" />
     <link href="./output.css" rel="stylesheet" />
     <style>
+      body {
+        background: radial-gradient(circle at 15% 10%, rgba(59, 130, 246, 0.08), transparent 32%),
+          radial-gradient(circle at 80% 20%, rgba(14, 165, 233, 0.08), transparent 30%),
+          radial-gradient(circle at 50% 85%, rgba(59, 130, 246, 0.06), transparent 34%),
+          #f8fafc;
+      }
       .fade-up {
         opacity: 0;
         transform: translateY(18px);
@@ -22,12 +28,62 @@
         opacity: 1;
         transform: translateY(0);
       }
+      .fade-left {
+        opacity: 0;
+        transform: translateX(-18px);
+        transition: opacity 0.7s ease, transform 0.7s ease;
+      }
+      .fade-right {
+        opacity: 0;
+        transform: translateX(18px);
+        transition: opacity 0.7s ease, transform 0.7s ease;
+      }
+      .fade-left.visible,
+      .fade-right.visible {
+        opacity: 1;
+        transform: translateX(0);
+      }
       .gallery-card img {
         transition: transform 0.6s ease, filter 0.6s ease;
       }
       .gallery-card:hover img {
         transform: scale(1.03);
         filter: saturate(1.05);
+      }
+      @keyframes floaty {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0); }
+      }
+      @keyframes glow {
+        0% { box-shadow: 0 18px 45px rgba(59,130,246,0.14); }
+        50% { box-shadow: 0 28px 70px rgba(14,165,233,0.22); }
+        100% { box-shadow: 0 18px 45px rgba(59,130,246,0.14); }
+      }
+      @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.02); }
+        100% { transform: scale(1); }
+      }
+      .floaty {
+        animation: floaty 8s ease-in-out infinite;
+      }
+      .glow {
+        animation: glow 6s ease-in-out infinite;
+      }
+      .pulse {
+        animation: pulse 5s ease-in-out infinite;
+      }
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.35rem 0.8rem;
+        border-radius: 999px;
+        border: 1px solid rgba(59, 130, 246, 0.2);
+        background: rgba(59, 130, 246, 0.08);
+        color: #1d4ed8;
+        font-size: 0.75rem;
+        font-weight: 600;
       }
     </style>
   </head>
@@ -62,14 +118,57 @@
         </p>
       </section>
 
+      <section class="grid lg:grid-cols-4 gap-4">
+        <div class="p-5 rounded-2xl border border-blue-100 bg-white/80 shadow-lg fade-up pulse" data-animate>
+          <p class="text-xs uppercase text-blue-600 font-semibold mb-2">Admin</p>
+          <p class="text-sm text-gray-600 dark:text-gray-300">Manage catalog, clients, selections, and approvals.</p>
+        </div>
+        <div class="p-5 rounded-2xl border border-blue-100 bg-white/80 shadow-lg fade-up pulse" data-animate>
+          <p class="text-xs uppercase text-blue-600 font-semibold mb-2">Client</p>
+          <p class="text-sm text-gray-600 dark:text-gray-300">Review options, request changes, confirm selections.</p>
+        </div>
+        <div class="p-5 rounded-2xl border border-blue-100 bg-white/80 shadow-lg fade-up pulse" data-animate>
+          <p class="text-xs uppercase text-blue-600 font-semibold mb-2">Review</p>
+          <p class="text-sm text-gray-600 dark:text-gray-300">Approve, lock, export, and document every revision.</p>
+        </div>
+        <div class="p-5 rounded-2xl border border-blue-100 bg-white/80 shadow-lg fade-up pulse" data-animate>
+          <p class="text-xs uppercase text-blue-600 font-semibold mb-2">Export</p>
+          <p class="text-sm text-gray-600 dark:text-gray-300">PDF/Excel snapshots for procurement and handoff.</p>
+        </div>
+      </section>
+
+      <section class="grid lg:grid-cols-2 gap-10 items-center">
+        <div class="space-y-5 fade-left" data-animate>
+          <h2 class="text-3xl font-extrabold">A single system of record for selections.</h2>
+          <p class="text-gray-600 dark:text-gray-300">
+            SpecSelect centralizes your inventory, client approvals, and revision history so every stakeholder sees the same truth. No more mismatched PDFs, out-of-date spreadsheets, or “which version is final?” emails.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="chip">Inventory catalog</span>
+            <span class="chip">Secure client links</span>
+            <span class="chip">Live selection updates</span>
+            <span class="chip">Audit trail exports</span>
+          </div>
+          <div class="flex flex-wrap gap-3 text-sm text-gray-600 dark:text-gray-300">
+            <span class="inline-flex items-center px-3 py-1 rounded-full bg-white shadow dark:bg-gray-800">✅ Admin + client visibility</span>
+            <span class="inline-flex items-center px-3 py-1 rounded-full bg-white shadow dark:bg-gray-800">✅ Revisions tracked automatically</span>
+            <span class="inline-flex items-center px-3 py-1 rounded-full bg-white shadow dark:bg-gray-800">✅ PDF/Excel on demand</span>
+          </div>
+        </div>
+        <div class="rounded-3xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-2xl floaty glow fade-right" data-animate>
+          <img src="./specselect/gif/Dashboard.gif" alt="SpecSelect dashboard preview" class="w-full" />
+        </div>
+      </section>
+
       <section class="grid lg:grid-cols-2 gap-8 items-start">
         <div class="space-y-4 fade-up" data-animate>
           <h3 class="text-xl font-semibold">The problem teams feel every week</h3>
           <ul class="space-y-3 text-sm text-gray-700 dark:text-gray-200">
-            <li><strong>Selections get lost:</strong> emails, spreadsheets, and PDFs drift out of sync.</li>
-            <li><strong>No clean audit trail:</strong> approvals and changes are hard to track.</li>
-            <li><strong>Clients get confused:</strong> too many links, versions, and unclear next steps.</li>
-            <li><strong>Exports are manual:</strong> teams rebuild snapshots for every review.</li>
+            <li><strong>Selections get lost:</strong> emails, spreadsheets, and PDFs drift out of sync across teams.</li>
+            <li><strong>No clean audit trail:</strong> approvals, comments, and change history are scattered.</li>
+            <li><strong>Clients get confused:</strong> too many links, versions, and unclear next steps slow decisions.</li>
+            <li><strong>Exports are manual:</strong> teams rebuild snapshots for every review cycle.</li>
+            <li><strong>Risk goes unnoticed:</strong> critical changes slip in without clear visibility.</li>
           </ul>
           <p class="text-gray-600 dark:text-gray-300">
             SpecSelect turns all of this into one guided, trackable flow with clarity for admins and clients.
@@ -78,10 +177,11 @@
         <div class="space-y-4 fade-up" data-animate>
           <h3 class="text-xl font-semibold">How SpecSelect fixes it</h3>
           <ul class="space-y-3 text-sm text-gray-700 dark:text-gray-200">
-            <li><strong>Inventory-first:</strong> your products live in one structured catalog.</li>
-            <li><strong>Secure sharing:</strong> one-click client links with access control and expiry.</li>
+            <li><strong>Inventory-first:</strong> your products live in one structured catalog with variants.</li>
+            <li><strong>Secure sharing:</strong> one-click client links with access control, expiry, and tracking.</li>
             <li><strong>Live selections:</strong> clients pick items in a guided portal with change tracking.</li>
             <li><strong>Revision certainty:</strong> version history with PDF/Excel exports on demand.</li>
+            <li><strong>AI support:</strong> draft specs, flag risks, and summarize revisions instantly.</li>
           </ul>
           <p class="text-gray-600 dark:text-gray-300">
             AI highlights risky changes, drafts spec notes, and summarizes revisions to speed approvals.
@@ -104,25 +204,25 @@
           </p>
         </div>
         <div class="grid md:grid-cols-2 gap-4">
-          <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+          <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up floaty" data-animate>
             <a href="./specselect/gif/Dashboard.gif" target="_blank" rel="noopener">
               <img src="./specselect/gif/Dashboard.gif" alt="SpecSelect admin dashboard GIF" />
             </a>
             <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Admin dashboard: clients, quotes, and AI productivity tips.</p>
           </div>
-          <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+          <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up pulse" data-animate>
             <a href="./specselect/gif/admincreatingaquote.gif" target="_blank" rel="noopener">
               <img src="./specselect/gif/admincreatingaquote.gif" alt="Create quote GIF" />
             </a>
             <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Build quotes: add items, variants, and lock/unlock states.</p>
           </div>
-          <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+          <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up floaty" data-animate>
             <a href="./specselect/gif/customermakingchangestoprevioussubmission-ezgif.com-video-to-gif-converter.gif" target="_blank" rel="noopener">
               <img src="./specselect/gif/customermakingchangestoprevioussubmission-ezgif.com-video-to-gif-converter.gif" alt="Client edits GIF" />
             </a>
             <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Clients adjust selections with a live change log.</p>
           </div>
-          <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+          <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up glow" data-animate>
             <a href="./specselect/gif/RevisionHistorybyadmin1.gif" target="_blank" rel="noopener">
               <img src="./specselect/gif/RevisionHistorybyadmin1.gif" alt="Revision history GIF" />
             </a>
@@ -132,19 +232,19 @@
       </section>
 
       <section class="grid lg:grid-cols-3 gap-6">
-        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up floaty" data-animate>
           <a href="./specselect/gif/customermakingchangestoprevioussubmission-ezgif.com-video-to-gif-converter.gif" target="_blank" rel="noopener">
             <img src="./specselect/gif/customermakingchangestoprevioussubmission-ezgif.com-video-to-gif-converter.gif" alt="Client selections GIF" />
           </a>
           <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Client portal: review, change, and submit selections with clarity.</p>
         </div>
-        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up pulse" data-animate>
           <a href="./specselect/gif/firstreviewbyadmin.gif" target="_blank" rel="noopener">
             <img src="./specselect/gif/firstreviewbyadmin.gif" alt="Admin review GIF" />
           </a>
           <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Admin review: approve, request edits, and log decisions.</p>
         </div>
-        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up glow" data-animate>
           <a href="./specselect/gif/ExporttoPDF.gif" target="_blank" rel="noopener">
             <img src="./specselect/gif/ExporttoPDF.gif" alt="Export PDF GIF" />
           </a>
@@ -153,13 +253,13 @@
       </section>
 
       <section class="grid lg:grid-cols-2 gap-6">
-        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up glow" data-animate>
           <a href="./specselect/gif/adminaddinganewproductwithai.gif" target="_blank" rel="noopener">
             <img src="./specselect/gif/adminaddinganewproductwithai.gif" alt="Admin adding product with AI GIF" />
           </a>
           <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">Add products with AI suggestions and variant setup.</p>
         </div>
-        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up" data-animate>
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 gallery-card fade-up floaty" data-animate>
           <a href="./specselect/Business View Revisions Page.png" target="_blank" rel="noopener">
             <img src="./specselect/Business View Revisions Page.png" alt="Revisions history" />
           </a>
@@ -168,23 +268,44 @@
       </section>
 
       <section class="grid md:grid-cols-3 gap-6">
-        <div class="p-6 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-lg fade-up" data-animate>
+        <div class="p-6 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-lg fade-up pulse" data-animate>
           <h3 class="text-lg font-semibold mb-2">Inventory control</h3>
           <p class="text-sm text-gray-600 dark:text-gray-300">
             Maintain your catalog, variants, pricing, and metadata in a single admin space with AI-assisted setup.
           </p>
         </div>
-        <div class="p-6 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-lg fade-up" data-animate>
+        <div class="p-6 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-lg fade-up pulse" data-animate>
           <h3 class="text-lg font-semibold mb-2">Client-ready portal</h3>
           <p class="text-sm text-gray-600 dark:text-gray-300">
             Clients get a secure, branded portal to review selections, request changes, and approve updates.
           </p>
         </div>
-        <div class="p-6 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-lg fade-up" data-animate>
+        <div class="p-6 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-lg fade-up pulse" data-animate>
           <h3 class="text-lg font-semibold mb-2">Revisions + exports</h3>
           <p class="text-sm text-gray-600 dark:text-gray-300">
             Every change is captured with history, snapshots, and one-click PDF/Excel exports for procurement.
           </p>
+        </div>
+      </section>
+
+      <section class="grid lg:grid-cols-2 gap-8 items-start">
+        <div class="p-6 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-lg fade-left" data-animate>
+          <h3 class="text-xl font-semibold mb-2">Security, governance, and control</h3>
+          <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+            <li>Role-based access for admins, reviewers, and client stakeholders.</li>
+            <li>Time-bound links with access tracking and optional approvals.</li>
+            <li>Immutable revision history with export-ready snapshots.</li>
+            <li>Audit-ready records for procurement and compliance reviews.</li>
+          </ul>
+        </div>
+        <div class="p-6 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-lg fade-right" data-animate>
+          <h3 class="text-xl font-semibold mb-2">AI assistance where it matters</h3>
+          <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+            <li>Draft spec notes and fill product details faster.</li>
+            <li>Highlight risky deltas between revisions.</li>
+            <li>Summarize client feedback and pending actions.</li>
+            <li>Speed up approvals with clean, consistent exports.</li>
+          </ul>
         </div>
       </section>
 
