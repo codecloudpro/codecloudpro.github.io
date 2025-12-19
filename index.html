@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CodeCloudPro | People on Any Cloud</title>
+    <title>CodeCloudPro | SpecSelect on Any Cloud</title>
     <meta
       name="description"
-      content="CodeCloudPro builds and operates People—HR, hiring, payroll, and CRM-style workflows—on secure, observable platforms across AWS, Azure, GCP, and Oracle. Platform engineering, security, and SRE for any stack." />
+      content="CodeCloudPro builds and operates SpecSelect—share inventories, collect client selections, track revisions, and export snapshots—on secure, observable platforms across AWS, Azure, GCP, and Oracle. Platform engineering, security, and SRE for any stack." />
     <link rel="canonical" href="https://codecloudpro.com" />
     <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
@@ -56,6 +56,22 @@
         opacity: 1;
         transform: translateY(0);
       }
+      @keyframes floaty {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0); }
+      }
+      @keyframes glow {
+        0% { box-shadow: 0 15px 45px rgba(59,130,246,0.12); }
+        50% { box-shadow: 0 25px 65px rgba(14,165,233,0.18); }
+        100% { box-shadow: 0 15px 45px rgba(59,130,246,0.12); }
+      }
+      .floaty {
+        animation: floaty 8s ease-in-out infinite;
+      }
+      .glow {
+        animation: glow 6s ease-in-out infinite;
+      }
     </style>
   </head>
   <body class="text-gray-900 antialiased dark:bg-gray-900 dark:text-white">
@@ -73,7 +89,7 @@
           <a
             href="./products.html"
             class="px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold hover:opacity-95 shadow-sm"
-            >View products</a
+            >View SpecSelect</a
           >
         </div>
       </div>
@@ -83,18 +99,18 @@
       <!-- Hero -->
       <section class="pt-14 grid lg:grid-cols-2 gap-12 items-center">
         <div class="space-y-5 fade-up" data-animate>
-          <span class="badge">Build any stack · Any cloud</span>
+          <span class="badge">SpecSelect · Share smarter · Any cloud</span>
           <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
-            People: one platform for every company with employees.
+            SpecSelect: share inventories, capture client picks, export with confidence.
           </h1>
           <p class="text-lg text-gray-600 dark:text-gray-300">
-            HR, hiring, payroll, CRM-style engagement (approvals, requests, notes, pipelines), and AI-assisted workflows—on secure, observable infrastructure across AWS, Azure, GCP, or Oracle. SpecSelect is available as an additional product.
+            Build your own inventory, send secure links, let clients choose, and watch selections + revisions in one place. Exports, audit trails, and AI nudges—powered on AWS, Azure, GCP, or Oracle. People (HR + hiring) stays available as a supporting suite.
           </p>
           <div class="flex flex-wrap gap-3">
             <a
               href="./products.html"
               class="px-5 py-3 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold hover:opacity-95 shadow-lg shadow-blue-200/60 dark:shadow-blue-900/40">
-              Explore products
+              Explore SpecSelect
             </a>
             <a
               href="#services"
@@ -104,22 +120,52 @@
           </div>
           <div class="flex flex-wrap gap-3 text-sm text-gray-600 dark:text-gray-300">
             <span class="inline-flex items-center px-3 py-1 rounded-full bg-white shadow dark:bg-gray-800">
-              ✅ People: HR, hiring, payroll, CRM workflows
+              ✅ SpecSelect: inventory → client selections → exports
             </span>
             <span class="inline-flex items-center px-3 py-1 rounded-full bg-white shadow dark:bg-gray-800">
-              ✅ Platform engineering · Security · SRE
+              ✅ People: HR, hiring, payroll, approvals (optional suite)
             </span>
             <span class="inline-flex items-center px-3 py-1 rounded-full bg-white shadow dark:bg-gray-800">
-              ✅ AWS · Azure · GCP · Oracle
+              ✅ Platform engineering · Security · SRE · Any cloud
             </span>
           </div>
         </div>
         <div class="fade-up" data-animate>
-          <div class="glass rounded-3xl border border-blue-100 dark:border-blue-900/40 shadow-2xl p-4">
+          <div class="glass rounded-3xl border border-blue-100 dark:border-blue-900/40 shadow-2xl p-4 floaty glow">
             <img
-              src="./people/dashboard.png"
-              alt="People dashboard preview"
+              src="./specselect/gif/Dashboard.gif"
+              alt="SpecSelect dashboard preview"
               class="rounded-2xl w-full border border-gray-100 dark:border-gray-800" />
+          </div>
+        </div>
+      </section>
+
+      <section class="space-y-6">
+        <div class="fade-up" data-animate>
+          <p class="text-sm font-semibold text-blue-700 dark:text-blue-400 uppercase tracking-wide">
+            SpecSelect flow
+          </p>
+          <h2 class="text-3xl font-extrabold">From inventory to client selections in minutes</h2>
+          <p class="text-gray-600 dark:text-gray-300 max-w-3xl">
+            Create your inventory, share secure links, let clients choose, and review selections with revision history and exports.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 card fade-up" data-animate>
+            <img src="./specselect/gif/adminaddinganewproductwithai.gif" alt="Add products with AI" class="w-full" />
+            <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">1. Build inventory with AI assistance.</p>
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 card fade-up" data-animate>
+            <img src="./specselect/gif/admincreatingaquote.gif" alt="Create and share quote" class="w-full" />
+            <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">2. Create a quote and share a secure link.</p>
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 card fade-up" data-animate>
+            <img src="./specselect/gif/customersideexcel.gif" alt="Client makes selections" class="w-full" />
+            <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">3. Clients review and make selections.</p>
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 card fade-up" data-animate>
+            <img src="./specselect/gif/RevisionHistorybyadmin.gif" alt="Revision history and exports" class="w-full" />
+            <p class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300">4. Track revisions and export PDF/Excel.</p>
           </div>
         </div>
       </section>
@@ -127,9 +173,9 @@
       <!-- Value props -->
       <section class="grid md:grid-cols-3 gap-6">
         <div class="p-6 rounded-2xl bg-white/80 dark:bg-gray-900/80 card fade-up" data-animate>
-          <h3 class="text-lg font-semibold mb-2">Products</h3>
+          <h3 class="text-lg font-semibold mb-2">SpecSelect first</h3>
           <p class="text-gray-600 dark:text-gray-300">
-            People: HR, hiring, payroll, CRM-style workflows, and AI assistance. SpecSelect remains available as an additional product.
+              Inventory to client selections with audit trails, revisions, and exports. People remains as the supporting HR + hiring suite.
           </p>
         </div>
         <div class="p-6 rounded-2xl bg-white/80 dark:bg-gray-900/80 card fade-up" data-animate>
@@ -152,9 +198,9 @@
             <p class="text-sm font-semibold text-blue-700 dark:text-blue-400 uppercase tracking-wide">
               Featured products
             </p>
-            <h2 class="text-3xl font-extrabold">People platform</h2>
+            <h2 class="text-3xl font-extrabold">SpecSelect platform</h2>
             <p class="text-gray-600 dark:text-gray-300 max-w-3xl">
-              HR, hiring, payroll, CRM-style engagement, approvals, requests, notes, automation, and pipelines—built and operated with the same rigor we apply to any platform. SpecSelect is available as an additional product.
+              Share inventories, let clients make selections, track revisions, and export with audit trails. AI helps flag risks and summarize changes. People (HR + hiring + payroll) is available as a secondary suite when you need it.
             </p>
           </div>
           <a
@@ -166,6 +212,16 @@
         <div class="grid md:grid-cols-2 gap-6">
           <div class="p-6 rounded-2xl bg-white/80 dark:bg-gray-900/80 card fade-up" data-animate>
             <div class="flex items-center gap-3 mb-3">
+              <span class="inline-flex items-center justify-center h-10 w-10 rounded-full bg-blue-100 text-blue-700 text-lg font-bold">S</span>
+              <h3 class="text-xl font-semibold">SpecSelect</h3>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 mb-3">
+              Build inventories, share secure links, capture client selections, manage revisions, and export PDF/Excel with full history. AI calls out risky changes and summarizes updates.
+            </p>
+            <a class="text-sm font-semibold text-blue-700 hover:text-blue-900 dark:text-blue-300" href="./specselect.html">Explore SpecSelect →</a>
+          </div>
+          <div class="p-6 rounded-2xl bg-white/80 dark:bg-gray-900/80 card fade-up" data-animate>
+            <div class="flex items-center gap-3 mb-3">
               <span class="inline-flex items-center justify-center h-10 w-10 rounded-full bg-blue-100 text-blue-700 text-lg font-bold">P</span>
               <h3 class="text-xl font-semibold">People</h3>
             </div>
@@ -174,16 +230,6 @@
               performance, and AI-assisted workflows—everything a modern CRM-style people platform needs.
             </p>
             <a class="text-sm font-semibold text-blue-700 hover:text-blue-900 dark:text-blue-300" href="./people.html">Explore People →</a>
-          </div>
-          <div class="p-6 rounded-2xl bg-white/80 dark:bg-gray-900/80 card fade-up" data-animate>
-            <div class="flex items-center gap-3 mb-3">
-              <span class="inline-flex items-center justify-center h-10 w-10 rounded-full bg-blue-100 text-blue-700 text-lg font-bold">S</span>
-              <h3 class="text-xl font-semibold">SpecSelect</h3>
-            </div>
-            <p class="text-gray-600 dark:text-gray-300 mb-3">
-              Specification intelligence to keep requirements, design, and delivery aligned with governance.
-            </p>
-            <a class="text-sm font-semibold text-blue-700 hover:text-blue-900 dark:text-blue-300" href="./specselect.html">Explore SpecSelect →</a>
           </div>
         </div>
       </section>
@@ -223,7 +269,7 @@
           <div class="p-6 rounded-2xl bg-white/80 dark:bg-gray-900/80 card fade-up" data-animate>
             <h3 class="text-lg font-semibold mb-2">Product rollout</h3>
             <p class="text-gray-600 dark:text-gray-300">
-              Deploy People with managed onboarding, integrations, training, and production support.
+              Deploy SpecSelect (and optionally People) with managed onboarding, integrations, training, and production support.
             </p>
           </div>
         </div>
@@ -319,7 +365,7 @@
             </p>
             <h2 class="text-3xl font-extrabold">Tell us about your stack and goals</h2>
             <p class="text-gray-600 dark:text-gray-300">
-              We reply within one business day. You’ll speak with an engineer about your current platform and how we can ship People (HR + hiring + payroll + CRM workflows) while running your stack on any cloud.
+              We reply within one business day. You’ll speak with an engineer about your current platform and how we can ship SpecSelect (and People if you need it) while running your stack on any cloud.
             </p>
           </div>
           <div class="p-6 rounded-2xl bg-white/80 dark:bg-gray-900/80 card fade-up" data-animate>
@@ -380,7 +426,7 @@
                   rows="4"
                   required
                   class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700"
-                  placeholder="People rollout, platform reliability, security review..." ></textarea>
+                  placeholder="SpecSelect rollout, platform reliability, security review..." ></textarea>
               </div>
               <button
                 type="submit"
@@ -401,7 +447,7 @@
           <span class="text-lg font-semibold">CodeCloudPro</span>
         </div>
         <div class="text-sm text-gray-500 dark:text-gray-400">
-          People on any cloud. © 2024 CodeCloudPro.
+          SpecSelect on any cloud. © 2024 CodeCloudPro.
         </div>
         <div class="flex items-center space-x-4 text-sm text-gray-600 dark:text-gray-300">
           <a href="#products" class="hover:text-blue-600 dark:hover:text-blue-400">Products</a>
