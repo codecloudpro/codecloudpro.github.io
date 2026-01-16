@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="en" class="scroll-smooth">
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,153 +11,183 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
     <link rel="manifest" href="./site.webmanifest" />
     <meta name="theme-color" content="#ffffff" />
-    <link href="./output.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: '#f0f9ff',
+                100: '#e0f2fe',
+                200: '#bae6fd',
+                300: '#7dd3fc',
+                400: '#38bdf8',
+                500: '#0ea5e9',
+                600: '#0284c7',
+                700: '#0369a1',
+                800: '#075985',
+                900: '#0c4a6e',
+              },
+              accent: {
+                50: '#ecfdf5',
+                100: '#d1fae5',
+                200: '#a7f3d0',
+                300: '#6ee7b7',
+                400: '#34d399',
+                500: '#10b981',
+                600: '#059669',
+                700: '#047857',
+                800: '#065f46',
+                900: '#064e3b',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
-      .fade-up {
-        opacity: 0;
-        transform: translateY(18px);
-        transition: opacity 0.7s ease, transform 0.7s ease;
-      }
-      .fade-up.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      .card-hover {
-        transition: transform 0.4s ease, box-shadow 0.4s ease;
-      }
-      .card-hover:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
       }
     </style>
-  </head>
-  <body class="bg-white text-gray-900 antialiased dark:bg-gray-900 dark:text-white">
-    <header class="sticky top-0 z-30 bg-white/90 backdrop-blur dark:bg-gray-900/90 border-b border-gray-100 dark:border-gray-800">
-      <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
-        <a href="./index.html" class="flex items-center space-x-3">
-          <img src="./images/logo.svg" alt="CodeCloudPro logo" class="h-8" />
-          <span class="text-lg font-semibold tracking-tight">CodeCloudPro</span>
-        </a>
-        <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
-          <a href="./index.html#services" class="hover:text-blue-600 dark:hover:text-blue-400">What we do</a>
-          <a href="./index.html#stacks" class="hover:text-blue-600 dark:hover:text-blue-400">Stacks</a>
-          <a href="./index.html#process" class="hover:text-blue-600 dark:hover:text-blue-400">Approach</a>
-          <a href="./index.html#contact" class="hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
-          <a
-            href="./index.html#contact"
-            class="px-4 py-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 shadow-sm"
-            >Book a call</a
-          >
+</head>
+<body class="bg-neutral-50 text-neutral-800">
+
+    <header class="absolute top-0 left-0 w-full z-50 py-6 px-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="./index.html" class="flex items-center space-x-2">
+                <img src="./images/logo.svg" alt="CodeCloudPro logo" class="h-8 w-8" />
+                <span class="text-2xl font-bold text-neutral-900">CodeCloudPro</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 text-lg font-semibold">
+                <a href="./specselect.html" class="text-neutral-700 hover:text-primary-600 transition">SpecSelect</a>
+                <a href="./products.html" class="text-primary-600 font-bold transition">Products</a>
+                <a href="./index.html#contact" class="text-neutral-700 hover:text-primary-600 transition">Contact</a>
+            </nav>
+            <a href="./index.html#contact" class="hidden md:inline-block px-6 py-3 rounded-full bg-primary-600 text-white font-bold hover:bg-primary-700 transition shadow-lg">
+                Get a Demo
+            </a>
         </div>
-      </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 py-16 lg:py-24 space-y-12">
-      <section class="space-y-4 fade-up" data-animate>
-        <p class="text-sm font-semibold text-blue-700 dark:text-blue-400 uppercase tracking-wide">
-          Our Products
-        </p>
-        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
-          SpecSelect—share inventories, capture client picks, export with confidence.
-        </h1>
-        <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl">
-          Build your inventory, send secure links, let clients select, and track every revision with PDF/Excel exports. People (HR + hiring + payroll) is available as a supporting suite.
-        </p>
-      </section>
-
-      <section class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="p-6 rounded-2xl bg-gradient-to-br from-white via-white to-blue-50 dark:from-gray-900 dark:via-gray-900 dark:to-blue-950/30 border border-gray-100 dark:border-gray-800 card-hover fade-up" data-animate>
-          <div class="flex items-center gap-3 mb-3">
-            <div class="h-10 w-10 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold">
-              S
+    <main>
+        <!-- Hero Section -->
+        <section class="pt-32 pb-20 bg-gradient-to-br from-primary-100 via-neutral-50 to-accent-100">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="text-center space-y-6">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-neutral-900" data-aos="fade-up">Our Products</h1>
+                    <p class="text-lg text-neutral-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                        AI-native products with production-ready infrastructure to solve your business needs.
+                    </p>
+                </div>
             </div>
-            <h2 class="text-xl font-semibold">SpecSelect</h2>
-          </div>
-          <p class="text-gray-600 dark:text-gray-300 mb-4">
-            Build inventories, share secure links, capture client selections, manage revisions, and export PDF/Excel with full history. AI calls out risky changes and summarizes updates.
-          </p>
-          <a
-            class="inline-flex items-center text-sm font-semibold text-blue-700 hover:text-blue-900 dark:text-blue-300"
-            href="./specselect.html">
-            View SpecSelect →
-          </a>
-        </div>
+        </section>
 
-        <div class="p-6 rounded-2xl bg-gradient-to-br from-white via-white to-blue-50 dark:from-gray-900 dark:via-gray-900 dark:to-blue-950/30 border border-gray-100 dark:border-gray-800 card-hover fade-up" data-animate>
-          <div class="flex items-center gap-3 mb-3">
-            <div class="h-10 w-10 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold">
-              P
+        <!-- Products Section -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="grid md:grid-cols-2 gap-10">
+                    <div class="p-8 rounded-2xl bg-neutral-100 shadow-lg flex flex-col" data-aos="fade-up">
+                        <h3 class="text-3xl font-bold mb-4">SpecSelect</h3>
+                        <p class="text-neutral-600 mb-6 flex-grow">
+                            Build inventories, share secure links, capture client selections, manage revisions, and export PDF/Excel with full history. AI calls out risky changes and summarizes updates.
+                        </p>
+                        <a href="./specselect.html" class="inline-block px-8 py-4 rounded-full bg-primary-600 text-white text-lg font-bold hover:bg-primary-700 transition shadow-xl text-center">
+                            Explore SpecSelect
+                        </a>
+                    </div>
+                    <div class="p-8 rounded-2xl bg-neutral-100 shadow-lg flex flex-col" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="text-3xl font-bold mb-4">People</h3>
+                        <p class="text-neutral-600 mb-6 flex-grow">
+                            Unified employee operations, hiring, payroll, approvals, requests, notes, and CRM-style pipelines with AI-assisted workflows, secure access, and production support.
+                        </p>
+                        <a href="./people.html" class="inline-block px-8 py-4 rounded-full bg-neutral-300 text-neutral-800 text-lg font-bold hover:bg-neutral-400 transition shadow-xl text-center">
+                            Coming Soon
+                        </a>
+                    </div>
+                </div>
             </div>
-            <h2 class="text-xl font-semibold">People</h2>
-          </div>
-          <p class="text-gray-600 dark:text-gray-300 mb-4">
-            Unified employee operations, hiring, payroll, approvals, requests, notes, and CRM-style pipelines with AI-assisted workflows, secure access, and production support.
-          </p>
-          <a
-            class="inline-flex items-center text-sm font-semibold text-blue-700 hover:text-blue-900 dark:text-blue-300"
-            href="./people.html">
-            View People →
-          </a>
-        </div>
-      </section>
+        </section>
 
-      <section class="p-6 rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-xl fade-up" data-animate>
-        <div class="grid lg:grid-cols-2 gap-6 items-center">
-          <div class="space-y-3">
-            <h3 class="text-2xl font-bold">Want a live walkthrough?</h3>
-            <p class="text-sm text-blue-50">
-              We’ll demo any product, share architecture, and map a go-live plan for your team.
-            </p>
-          </div>
-          <div class="flex flex-wrap gap-3">
-            <a
-              href="./index.html#contact"
-              class="px-4 py-2 rounded-full bg-white text-blue-700 font-semibold hover:bg-blue-100">
-              Schedule a demo
-            </a>
-            <a
-              href="mailto:nitesh.chauhan@codecloudpro.com"
-              class="px-4 py-2 rounded-full border border-white/60 text-white font-semibold hover:bg-white/10">
-              Email us
-            </a>
-          </div>
-        </div>
-      </section>
+        <!-- Contact Section -->
+        <section class="py-20 bg-gradient-to-br from-primary-100 via-neutral-50 to-accent-100">
+            <div class="max-w-4xl mx-auto px-4">
+                <div class="text-center space-y-4 mb-12">
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-neutral-900">Want a live walkthrough?</h2>
+                    <p class="text-lg text-neutral-600 max-w-2xl mx-auto">
+                        We’ll demo any product, share architecture, and map a go-live plan for your team.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-2xl" data-aos="fade-up">
+                    <form action="https://formsubmit.co/nitesh.chauhan@codecloudpro.com" method="POST" class="space-y-6">
+                        <input type="hidden" name="_subject" value="New CodeCloudPro Website Inquiry" />
+                        <input type="hidden" name="_template" value="table" />
+                        <input type="hidden" name="_captcha" value="false" />
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="font-semibold text-lg">Full Name</label>
+                                <input type="text" id="name" name="name" required class="w-full mt-2 px-4 py-3 rounded-lg border border-neutral-300 focus:ring-primary-500 focus:border-primary-500">
+                            </div>
+                            <div>
+                                <label for="email" class="font-semibold text-lg">Work Email</label>
+                                <input type="email" id="email" name="email" required class="w-full mt-2 px-4 py-3 rounded-lg border border-neutral-300 focus:ring-primary-500 focus:border-primary-500">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="message" class="font-semibold text-lg">Message</label>
+                            <textarea id="message" name="message" rows="5" required class="w-full mt-2 px-4 py-3 rounded-lg border border-neutral-300 focus:ring-primary-500 focus:border-primary-500"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="px-10 py-4 rounded-full bg-primary-600 text-white text-lg font-bold hover:bg-primary-700 transition shadow-lg">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer class="border-t border-gray-200 bg-white dark:bg-gray-900 dark:border-gray-800">
-      <div class="max-w-7xl mx-auto px-4 py-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-        <div class="flex items-center space-x-3">
-          <img src="./images/logo.svg" class="h-8" alt="CodeCloudPro logo" />
-          <span class="text-lg font-semibold">CodeCloudPro</span>
+    <footer class="bg-neutral-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <a href="./index.html" class="flex items-center space-x-2 mb-4">
+                        <img src="./images/logo.svg" alt="CodeCloudPro logo" class="h-8 w-8" />
+                        <span class="text-2xl font-bold">CodeCloudPro</span>
+                    </a>
+                    <p class="text-neutral-400">
+                        AI-native products with production-ready infrastructure.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="./specselect.html" class="text-neutral-300 hover:text-white transition">SpecSelect</a></li>
+                        <li><a href="./products.html" class="text-neutral-300 hover:text-white transition">Products</a></li>
+                        <li><a href="./index.html#contact" class="text-neutral-300 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Contact</h4>
+                    <p class="text-neutral-300">nitesh.chauhan@codecloudpro.com</p>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-neutral-800 pt-8 text-center text-neutral-500">
+                <p>&copy; 2024 CodeCloudPro. All rights reserved.</p>
+            </div>
         </div>
-        <div class="text-sm text-gray-500 dark:text-gray-400">
-          AI-native products with production-ready infrastructure. © 2024 CodeCloudPro.
-        </div>
-        <div class="flex items-center space-x-4 text-sm text-gray-600 dark:text-gray-300">
-          <a href="./index.html#services" class="hover:text-blue-600 dark:hover:text-blue-400">What we do</a>
-          <a href="./products.html" class="hover:text-blue-600 dark:hover:text-blue-400">Products</a>
-          <a href="./index.html#contact" class="hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
-        </div>
-      </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const targets = document.querySelectorAll("[data-animate]");
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-                observer.unobserve(entry.target);
-              }
-            });
-          },
-          { threshold: 0.15 }
-        );
-        targets.forEach((el) => observer.observe(el));
+      AOS.init({
+        duration: 1000,
+        once: true,
       });
     </script>
-  </body>
+</body>
 </html>
